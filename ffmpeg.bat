@@ -1,0 +1,1 @@
+FOR /F "tokens=*" %%G IN ('dir /b *.mp4') DO ffmpeg -i "%%G" -b:v 3600K -vf noise=alls=1:allf=t "%%~nG_1.mp4"
